@@ -1,6 +1,85 @@
-.openingImage {
-	height: 400px;
+.container-fluid {
+	 background: #3b3b3b;
+	 font-family: sans-serif;
+	 color: white;
+	 padding: 0;
+	 position: relative;
+}
+
+
+.openingImage {  /*made this parrallex */
+    height: 700px;
     position: relative;
-    background-position: bottom;
-	background: url(us4.png) 60% no-repeat;
+    background: url(mainImage3.jpg) 70% no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: 1
+
+}
+
+#firstDiv {
+	width: 100%;
+    position: absolute;
+    color: #fff;
+    z-index: 5;
+  	padding-top: 25%;
+   
+}
+
+
+.title {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    animation: fadein 1s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+
+}
+
+.title2 {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    animation: fadein 1.2s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+
+}
+
+.tagLine {
+ 	top: 10%;
+    font-size: 25px;
+    text-align: center;
+    animation: fadein 2s;
+    padding-top: 40px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0; }
+}
+
+#secondDiv {
+	padding-top: 90px;
+	padding-bottom: 90px;
+	text-align: center;
+	font-size: 25px;
+}
+
+#iframe {
+	padding-top: 90px;
+	width: 100%;
+
 }
