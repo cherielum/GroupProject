@@ -1,4 +1,4 @@
-function drawMap () {
+console.log('trish');
 	var map;
 	var mapDiv = document.getElementById('map');
 	var atlantaCoordinates = {lat: 33.84860, lng: -84.373553}
@@ -10,8 +10,4 @@ function drawMap () {
 	function initMap() {
 		map = new google.maps.Map(mapDiv, options);		
 	}	
-
-}
-drawMap();
-
 
