@@ -44,18 +44,43 @@ Commit message is vague -->
 
       
 
-  </head>
+   </head>
     <body>
       <div class = "container-fluid"> 
         <div>
           <div class="categories row" id = "firstDiv"> 
             <div class = "col-md-12 header text-center"> 
-              <h2 class = "title"> InstaFamous <span= "title2">&#9829 Friends  </span> </h2> 
-              <p class= "tagLine"> Instantly find famous people near you! </p>
+
+               <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for stars..">
+
+                <ul id="myUL">
+                  <li><a href="#">Justin Bieber</a></li>
+                  <li><a href="#">Usher</a></li>
+
+                  <li><a href="#">Ludacris</a></li>
+                  <li><a href="#">TI</a></li>
+
+                  <li><a href="#">Young Jeezy</a></li>
+                  <li><a href="#">Gucci Mane</a></li>
+                  <li><a href="#">Cherie Lum</a></li>
+                </ul>
+
+
+              <h2 class = "title"> Insta<span class ="title2">Famous</span><span class ="title3"> Friends</span> </h2> 
+              <p class= "tagLine"> Instantly find famous people near you! </p> 
+
+             
+              
+              
+
+
+                  
             </div>
           </div>
         </div>
-        <div class = "openingImage"></div> 
+      <div class= "openingImage"></div>
+
+     
         
 
         <div class="categories row" id = "secondDiv">
@@ -67,11 +92,11 @@ Commit message is vague -->
                 <span class="caret"></span></button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li> <a class="dropdown-item" href="#">Justin Bieber <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
-                        <li> <a class="dropdown-item" href="#">Taylor Swift <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
-                        <li> <a class="dropdown-item" href="#">Jay Z <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
-                        <li> <a class="dropdown-item" href="#">Beyonce <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
-                        <li> <a class="dropdown-item" href="#">Rihanna <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
-                        <li> <a class="dropdown-item" href="#">Ariana Grande <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
+                        <li> <a class="dropdown-item" href="#">Usher <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
+                        <li> <a class="dropdown-item" href="#">Ludacris <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
+                        <li> <a class="dropdown-item" href="#">TI <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
+                        <li> <a class="dropdown-item" href="#">Young Jeezy <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
+                        <li> <a class="dropdown-item" href="#">Gucci Mane <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
                          <li> <a class="dropdown-item" href="#">Cherie Lum <input type="radio" id="ID" name="NAME" value="VALUE"><label for="ID"></label> </a></li>
                       </ul>
               </div> 
@@ -103,8 +128,18 @@ Commit message is vague -->
           </div>    
       </div> 
 
-      <div id="map"></div>
-      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d414.1992863496797!2d-84.373556!3d33.848572!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f50f5fbfcbf39d%3A0xaeeb9796e65b24d0!2sAtlanta+Tech+Village!5e0!3m2!1sen!2sus!4v1507659570935" width="1276" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+       <!-- <div>
+          <div class="categories row" id = "thirdDiv"> 
+            <div class = "col-md-12 header text-center"> 
+               <div class = "openingImage">
+              <h2 class = "contactUs"> Contact Us </h2> 
+              <p class= "contactUs2"> Let us know who else you'd like for us to add today! </p>
+              </div> 
+            </div>
+          </div>
+        </div> -->
+      
+        <div id = "map"></div> 
       
       <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBr8fBKRKHpLuDKbLBBj_sERFmH70AOL_U&callback=initMap"></script>
       <script src="index.js"></script>

@@ -9,14 +9,53 @@ html, body {
 
 }
 .container-fluid {
-	 background: #3b3b3b;
-	 font-family: sans-serif;
-	 color: white;
-	 padding: 0;
-	 margin: 0;100%
-	 position: relative;
+     background: #3b3b3b;
+     font-family: sans-serif;
+     color: white;
+     padding: 0;
+     margin: 0;
+     position: relative;
 }
 
+
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 30%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 10px; /* Add some space below the input */
+    display: block; 
+    margin-top: -24%;
+    margin-left: 2%;
+
+
+
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    width: 10%;
+    margin-left: 2%;
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 5px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 14px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
 
 .openingImage {  /*made this parrallex */
     height: 700px;
@@ -32,17 +71,17 @@ html, body {
 }
 
 #firstDiv {
-	width: 100%;
+    width: 100%;
     position: absolute;
     color: #fff;
     z-index: 5;
-  	padding-top: 25%;
+    padding-top: 25%;
    
 }
 
 
 .title {
-    font-size: 45px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     animation: fadein 1s;
@@ -56,10 +95,24 @@ html, body {
 }
 
 .title2 {
-    font-size: 45px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
-    animation: fadein 1.2s;
+    animation: fadein 1.5s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+
+}
+
+.title3 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    animation: fadein 2s;
 
 }
 
@@ -70,11 +123,11 @@ html, body {
 }
 
 .tagLine {
- 	top: 10%;
+    top: 10%;
     font-size: 25px;
     text-align: center;
-    animation: fadein 2s;
-    padding-top: 40px;
+    animation: fadein 2.5s;
+    padding-top: 10px;
 }
 
 @keyframes fadein {
@@ -83,14 +136,23 @@ html, body {
 }
 
 #secondDiv {
-	padding-top: 90px;
-	padding-bottom: 90px;
-	text-align: center;
-	font-size: 25px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    text-align: center;
+    font-size: 25px;
 }
 
 #iframe {
-	padding-top: 90px;
-	width: 100%;
+    padding-top: 90px;
+    width: 100%;
 
+}
+
+#thirdDiv {
+    padding-bottom:30px;
+}
+.contactUs {
+    font-size: 50px;
+    color: white;
+    z-index: 5;
 }
