@@ -1,9 +1,19 @@
+html, body {
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+ }
+#map {
+    height: 1000px;
+
+}
 .container-fluid {
 	 background: #3b3b3b;
 	 font-family: sans-serif;
 	 color: white;
 	 padding: 0;
-	 margin: 0;
+	 margin: 0;100%
 	 position: relative;
 }
 
