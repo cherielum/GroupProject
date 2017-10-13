@@ -50,39 +50,18 @@ Commit message is vague -->
         <div>
           <div class="categories row" id = "firstDiv"> 
             <div class = "col-md-12 header text-center"> 
-
-               <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for stars..">
-
-                <ul id="myUL">
-                  <li><a href="#">Justin Bieber</a></li>
-                  <li><a href="#">Usher</a></li>
-
-                  <li><a href="#">Ludacris</a></li>
-                  <li><a href="#">TI</a></li>
-
-                  <li><a href="#">Young Jeezy</a></li>
-                  <li><a href="#">Gucci Mane</a></li>
-                  <li><a href="#">Cherie Lum</a></li>
-                </ul>
-
-
-              <h2 class = "title"> Insta<span class ="title2">Famous</span><span class ="title3"> Friends</span> </h2> 
-              <p class= "tagLine"> Instantly find famous people near you! </p> 
-
-             
-              
-              
-
-
-                  
+                         
             </div>
           </div>
         </div>
-      <div class= "openingImage"></div>
+        <div id = "map"></div> 
 
-     
-        
+         <h2 class = "title"> Insta<span class ="title2">Famous</span><span class ="title3"> Friends</span> </h2> 
+              <p class= "tagLine"> Instantly find famous people near you! </p> 
+              </div>  
+              <div class= "openingImage"></div>
 
+ 
         <div class="categories row" id = "secondDiv">
 
           <div class = "col-md-4 header text-center"> 
@@ -138,8 +117,26 @@ Commit message is vague -->
             </div>
           </div>
         </div> -->
+
+        
+
       
-        <div id = "map"></div> 
+        
+
+         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for stars..">
+
+      <ul id="myUL">   // position: absolute top:0 left:0; 
+        <li><a href="#">Justin Bieber</a></li>
+        <li><a href="#">Usher</a></li>
+
+        <li><a href="#">Ludacris</a></li>
+        <li><a href="#">TI</a></li>
+
+        <li><a href="#">Young Jeezy</a></li>
+        <li><a href="#">Gucci Mane</a></li>
+        <li><a href="#">Cherie Lum</a></li>
+      </ul>  
+      
       
       <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBr8fBKRKHpLuDKbLBBj_sERFmH70AOL_U&callback=initMap"></script>
       <script src="index.js"></script>

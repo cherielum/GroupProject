@@ -31,3 +31,8 @@ function myFunction() {
         }
     }
 }
+
+$(function() {
+
+    $('.openingImage').delay(5000).fadeOut(300)
+}); 
