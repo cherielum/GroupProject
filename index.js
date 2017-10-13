@@ -1,1 +1,2 @@
-  var timeStamp = ;
+  var timeStamp = $.now();
+  console.log(timeStamp);
