@@ -1,3 +1,4 @@
+
 console.log('trish');
 	var map;
 	var mapDiv = document.getElementById('map');
@@ -8,6 +9,16 @@ console.log('trish');
 	};
 
 	function initMap() {
-		map = new google.maps.Map(mapDiv, options);		
-	}	
+		map = new google.maps.Map(mapDiv, options);
+	}
+
+$(function() {
+
+	$('.openingImage').delay(3000).fadeOut(300)
+}); 
+
+$(function() {
+
+	$('#firstDiv').delay(3000).fadeOut(300)
+}); 
 
