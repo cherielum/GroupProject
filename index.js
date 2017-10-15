@@ -36,7 +36,7 @@ $(function() {
     })
 	})
 
-	var getBieberId = $('.TS').on('click', 'input', function(e){
+	var getSwiftId = $('.TS').on('click', 'input', function(e){
 			var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=taylor%20swift&page=1&include_adult=false";
 			$.get(GetIdUrl, function(data){
 					var celebId = JSON.stringify((data.results[0]["id"]));
@@ -46,5 +46,30 @@ $(function() {
 			});
 	})
 })
+
+	var getJayZId = $('.JZ').on('click', 'input', function(e){
+			var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=jay%20z&page=1&include_adult=false";
+			$.get(GetIdUrl, function(data){
+					var celebId = JSON.stringify((data.results[0]["id"]));
+			var getBirthPlaceUrl = "https://api.themoviedb.org/3/person/"+ celebId + "?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US";
+			$.get(getBirthPlaceUrl, function(data){
+					console.log(data.place_of_birth)
+			});
+		})
+	})
+
+	var getBeyId = $('.Bey').on('click', 'input', function(e){
+			var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=beyonce&page=1&include_adult=false";
+			$.get(GetIdUrl, function(data){
+					var celebId = JSON.stringify((data.results[0]["id"]));
+			var getBirthPlaceUrl = "https://api.themoviedb.org/3/person/"+ celebId + "?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US";
+			$.get(getBirthPlaceUrl, function(data){
+					console.log(data.place_of_birth)
+			});
+		})
+	})
+
+
+
 
 });
