@@ -1,5 +1,33 @@
+$(function() {
 
-console.log('trish');
+	$('.dropdown-menu').on('click', 'input', function(){
+		var chosenCelebrity = $(this).val();
+		console.log(chosenCelebrity);
+		var url = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query="+ chosenCelebrity +"&page=1&include_adult=false";
+		$.get(url, function(data){
+			console.log(data);
+			var celebretyId = data.results[0].id;
+			console.log(celebretyId);
+		});
+	})
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	var map;
 	var mapDiv = document.getElementById('map');
 	var atlantaCoordinates = {lat: 33.84860, lng: -84.373553}
@@ -21,6 +49,7 @@ $(function() {
 
 	$('#firstDiv').delay(3000).fadeOut(300)
 });
+
 
 
 $(function() {
@@ -83,3 +112,4 @@ $(function() {
 
 
 });
+
