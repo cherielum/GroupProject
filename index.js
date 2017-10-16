@@ -1,32 +1,3 @@
-$(function() {
-
-	$('.dropdown-menu').on('click', 'input', function(){
-		var chosenCelebrity = $(this).val();
-		console.log(chosenCelebrity);
-		var url = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query="+ chosenCelebrity +"&page=1&include_adult=false";
-		$.get(url, function(data){
-			console.log(data);
-			var celebretyId = data.results[0].id;
-			console.log(celebretyId);
-		});
-	})
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	var map;
 	var mapDiv = document.getElementById('map');
@@ -98,8 +69,55 @@ $(function() {
 		})
 	})
 
+	var getRihannaId = $('.Rihanna').on('click', 'input', function(e){
+			var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=rihanna&page=1&include_adult=false";
+			$.get(GetIdUrl, function(data){
+					var celebId = JSON.stringify((data.results[0]["id"]));
+			var getBirthPlaceUrl = "https://api.themoviedb.org/3/person/"+ celebId + "?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US";
+			$.get(getBirthPlaceUrl, function(data){
+					console.log(data.place_of_birth)
+			});
+		})
+	})
 
+	var getAGId = $('.AG').on('click', 'input', function(e){
+			var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=ariana%20grande&page=1&include_adult=false";
+			$.get(GetIdUrl, function(data){
+					var celebId = JSON.stringify((data.results[0]["id"]));
+			var getBirthPlaceUrl = "https://api.themoviedb.org/3/person/"+ celebId + "?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US";
+			$.get(getBirthPlaceUrl, function(data){
+					console.log(data.place_of_birth)
+			});
+		})
+	})
+
+	var getBSId = $('.BS').on('click', 'input', function(e){
+			var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=barbra%20streisand&page=1&include_adult=false";
+			$.get(GetIdUrl, function(data){
+					var celebId = JSON.stringify((data.results[0]["id"]));
+			var getBirthPlaceUrl = "https://api.themoviedb.org/3/person/"+ celebId + "?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US";
+			$.get(getBirthPlaceUrl, function(data){
+					console.log(data.place_of_birth)
+
+			});
+		})
+	})
+
+
+
+	 $('.IT').on('click', function(e){
+		 var celebId = ['10400','150810','131519','84932','14386','226001']
+		 celebId.forEach(function(element){
+ 			//var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=barbra%20streisand&page=1&include_adult=false";
+ 			//$.get(GetIdUrl, function(data){
+ 					//var celebId = JSON.stringify((data.results[0]["id"]));
+
+					var getBirthPlaceUrl = "https://api.themoviedb.org/3/person/" + element + "?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US";
+		 			$.get(getBirthPlaceUrl, function(data){
+		 					console.log(data.place_of_birth)
+						})
+ 			});
+ 		})
 
 
 });
-
