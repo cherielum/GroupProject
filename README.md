@@ -1,5 +1,5 @@
 ************************************************************************
-                      README.MD - InstaFamous
+                      README.MD - InstaFamous Birthplace
 ************************************************************************
 
 Developers:
@@ -8,9 +8,21 @@ Developers:
 - Cherie Lum - https://github.com/cherielum
 - Zachary Aten - https://github.com/ConsultAtlas
 
-Files:
-index.html
-index.css
-index.js
+************************************************************************
 
-InstaFamous is a cool app to check the current location of a celebrity of your choice. (You can also track your friends!!!!)
+Overview of the Project
+
+InstaFamous Birthplace is a cool app to check the birth place of your favorite celebrity.
+
+************************************************************************
+
+Technologies, Frameworks, and Programming Languages used
+
+- HTML5 & CSS3
+- Bootstrap 4 - https://getbootstrap.com/docs/4.0/getting-started/introduction/
+- JavaScript
+- jQuery - http://api.jquery.com/
+- Google Maps API - https://developers.google.com/maps/
+- The Movie Database API - https://www.themoviedb.org/documentation/api
+
+************************************************************************
