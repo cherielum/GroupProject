@@ -102,7 +102,7 @@ $(function() {
 		})
 	})
 
-
+	$('.IT').on('click', 'input', function())
 
 
 });
