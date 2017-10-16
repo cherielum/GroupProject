@@ -26,3 +26,20 @@ Technologies, Frameworks, and Programming Languages used
 - The Movie Database API - https://www.themoviedb.org/documentation/api
 
 ************************************************************************
+
+Walkthrough of the Application
+
+V1.
+Visit the InstaFamous Birthplace website at: .........
+
+Select your favorite celebrity from the list provided. View on the map where your favorite celebrity was born. View google maps places information about the location and get to know your favorite celebrity in a whole new way!
+
+V2. Update - Search for Celebrities
+
+Type the name of your favorite celebrity into the search box. Be amazed as the location of their birth magically appears on the map. Click on the location and learn more about the place and about how it impacted the celebrity you love.
+
+************************************************************************
+
+Future Features to be Added
+
+1. 
