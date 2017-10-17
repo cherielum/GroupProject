@@ -42,4 +42,8 @@ Type the name of your favorite celebrity into the search box. Be amazed as the l
 
 Future Features to be Added
 
-1. 
+1. Search two celebrities at once and see how far away they were born from each other!
+
+2. Create a list of celebrities who you want to remember their birthdays so that you can tweet them on the day, letting them know that you know where they are from and 
+
+3.
