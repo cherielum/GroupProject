@@ -5,7 +5,11 @@ html, body {
     padding: 0;
  }
 #map {
+<<<<<<< HEAD
     height: 70vh;
+=======
+    height: 410px;
+>>>>>>> ac8b9a05213fcf8523d59cf5b27f41dc91812006
 
 }
 .container-fluid {
@@ -32,14 +36,22 @@ html, body {
     height: 50px;
     background:rgb(59, 59, 59, 0.8);
     position: absolute;
+<<<<<<< HEAD
     top: 425px;
+=======
+    top: 327px;
+>>>>>>> ac8b9a05213fcf8523d59cf5b27f41dc91812006
     left: 2%;
     z-index: 100;
 
 }
 
 .openingImage {  /*made this parrallex */
+<<<<<<< HEAD
     height: 100vh;
+=======
+    height: 700px;
+>>>>>>> ac8b9a05213fcf8523d59cf5b27f41dc91812006
     position: relative; /*has to stay relative otherwise won't*/
     background: url(mainImage3.jpg) 70% no-repeat;
     background-attachment: fixed;
