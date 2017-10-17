@@ -30,7 +30,24 @@ $(function() {
 	$('#firstDiv').delay(3000).fadeOut(300)
 
 
+/*===========================================================================
+  USE GOOGLE MAPS GEOCODE LIBRARY TO CONVERT BIRTHPLACE TO COORDINATES
+  ===========================================================================*/
 
+      function convertCityState (geocoder, resultsMap, bplace) {
+        var birthplace = bplace;
+        geocoder.geocode({'address': birthplace}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
 
 /*=====================================================
   GET CELEBRITY BIRTHPLACES AND IDs FROM MOVIEDB API
