@@ -1,6 +1,6 @@
-/*===========================  
-  INITIALIZE MAP 
- =============================*/
+/*========================================= 
+  INITIALIZE MAP AND GEOCODE API
+ ========================================*/
 
 	var map;
 	var mapDiv = document.getElementById('map');
@@ -9,10 +9,11 @@
 		zoom: 14,
 		center: atlantaCoordinates
 	};
-
+	var geocoder;
 
 	function initMap() {
 		map = new google.maps.Map(mapDiv, options);
+		geocoder = new google.maps.Geocoder();
 	}
 
 /*================================
