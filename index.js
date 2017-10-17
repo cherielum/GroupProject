@@ -12,7 +12,7 @@
 	var geocoder;
 	var pic;
 	var name;
-
+	var markers = [];
 	function initMap() {
 		map = new google.maps.Map(mapDiv, options);
 		geocoder = new google.maps.Geocoder();
@@ -56,13 +56,22 @@ $(function() {
               map: resultsMap,
               position: results[0].geometry.location
             });
-			  marker.addListener('click', function() {
-			    infowindow.open(map, marker);
-			  });
+            markers.push(marker);
+			marker.addListener('click', function() {
+			infowindow.open(map, marker);
+			});
           } else {
             alert('Geocode was not successful for the following reason: ' + status);
           }
         });
+      }
+
+      function clearMarkers() {
+      	console.log(826);
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(null);
+        }
+      	markers = [];
       }
 
 /*=====================================================================================
@@ -70,6 +79,7 @@ $(function() {
   ===================================================================================*/
 
     var getBieberId = $('.JB').on('click', 'input', function(e){
+    	name = '';
     	name = 'Jusin Bieber';
         var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=justin%20bieber&page=1&include_adult=false";
         $.get(GetIdUrl, function(data){
@@ -84,6 +94,7 @@ $(function() {
 	})
 
 	var getSwiftId = $('.TS').on('click', 'input', function(e){
+    		name = '';
 			name = 'Taylor Swift'
 			var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=taylor%20swift&page=1&include_adult=false";
 			$.get(GetIdUrl, function(data){
@@ -98,6 +109,8 @@ $(function() {
 })
 
 	var getJayZId = $('.JZ').on('click', 'input', function(e){
+    		name = '';
+			name = 'Jay Z'
 			var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=jay%20z&page=1&include_adult=false";
 			$.get(GetIdUrl, function(data){
 					var celebId = JSON.stringify((data.results[0]["id"]));
@@ -158,7 +171,7 @@ $(function() {
 		})
 	})
 
-
+	$('input[type=radio]').change(clearMarkers);
 
 	 $('.IT').on('click', function(e){
 		 var celebId = ['10400','150810','131519','84932','14386','226001']
@@ -174,6 +187,5 @@ $(function() {
 						})
  			});
  		})
-
 
 });
