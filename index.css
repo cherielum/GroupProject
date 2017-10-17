@@ -5,7 +5,7 @@ html, body {
     padding: 0;
  }
 #map {
-    height: 410px;
+    height: 70vh;
 
 }
 .container-fluid {
@@ -32,14 +32,14 @@ html, body {
     height: 50px;
     background:rgb(59, 59, 59, 0.8);
     position: absolute;
-    top: 327px;
+    top: 425px;
     left: 2%;
     z-index: 100;
 
 }
 
 .openingImage {  /*made this parrallex */
-    height: 700px;
+    height: 100vh;
     position: relative; /*has to stay relative otherwise won't*/
     background: url(mainImage3.jpg) 70% no-repeat;
     background-attachment: fixed;

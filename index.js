@@ -10,6 +10,8 @@
 		center: atlantaCoordinates
 	};
 	var geocoder;
+	var pic;
+	var name;
 
 	function initMap() {
 		map = new google.maps.Map(mapDiv, options);
@@ -22,12 +24,20 @@
 
 $(function() {
 
-	$('.openingImage').delay(3000).fadeOut(300)
-});
+	$('.openingImage').delay(4000).fadeOut(1500);
 
-$(function() {
+	$('#firstDiv').delay(4000).fadeOut(2000);
 
-	$('#firstDiv').delay(3000).fadeOut(300)
+/*==================================
+  INFOWINDOW
+  ================================*/
+    var infoWindowContent = '<div id="content">'+
+      '<h1 id="name">' + name + '</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="' + pic +'"/>'+
+      '</div>'+
+      '</div>';
+
 
 
 /*===========================================================================
@@ -38,11 +48,17 @@ $(function() {
         var birthplace = bplace;
         geocoder.geocode({'address': birthplace}, function(results, status) {
           if (status === 'OK') {
+			var infowindow = new google.maps.InfoWindow({
+			    content: infoWindowContent
+			});
             resultsMap.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
               map: resultsMap,
               position: results[0].geometry.location
             });
+			  marker.addListener('click', function() {
+			    infowindow.open(map, marker);
+			  });
           } else {
             alert('Geocode was not successful for the following reason: ' + status);
           }
@@ -54,24 +70,28 @@ $(function() {
   ===================================================================================*/
 
     var getBieberId = $('.JB').on('click', 'input', function(e){
+    	name = 'Jusin Bieber';
         var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=justin%20bieber&page=1&include_adult=false";
         $.get(GetIdUrl, function(data){
             var celebId = JSON.stringify((data.results[0]["id"]));
 				var getBirthPlaceUrl = "https://api.themoviedb.org/3/person/"+ celebId + "?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US";
 				$.get(getBirthPlaceUrl, function(data){
 						var birthplace = (data.place_of_birth);
+						pic = (data.profile_path);
 						convertCityState(geocoder, map, birthplace);
         		});
     	})
 	})
 
 	var getSwiftId = $('.TS').on('click', 'input', function(e){
+			name = 'Taylor Swift'
 			var GetIdUrl = "https://api.themoviedb.org/3/search/person?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US&query=taylor%20swift&page=1&include_adult=false";
 			$.get(GetIdUrl, function(data){
 					var celebId = JSON.stringify((data.results[0]["id"]));
 			var getBirthPlaceUrl = "https://api.themoviedb.org/3/person/"+ celebId + "?api_key=e09be2ac4d045c2e602d7bf0280ce9ff&language=en-US";
 			$.get(getBirthPlaceUrl, function(data){
 					var birthplace = (data.place_of_birth);
+					pic = data.profile_path;
 					convertCityState(geocoder, map, birthplace);
 			});
 	})
