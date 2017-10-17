@@ -1,5 +1,4 @@
 
-console.log('trish');
 	var map;
 	var mapDiv = document.getElementById('map');
 	var atlantaCoordinates = {lat: 33.84860, lng: -84.373553}
@@ -13,7 +12,6 @@ console.log('trish');
 	}
 
 $(function() {
-
 	$('.openingImage').delay(4500).fadeOut(500)
 }); 
 
