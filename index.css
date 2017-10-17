@@ -5,39 +5,64 @@ html, body {
     padding: 0;
  }
 #map {
-    height: 1000px;
+    height: 70vh;
 
 }
 .container-fluid {
-	 background: #3b3b3b;
 	 font-family: sans-serif;
 	 color: white;
 	 padding: 0;
-	 margin: 0;100%
-	 position: relative;
+	 margin: 0;
+	 position: absolute;
 }
 
+.dropdown-container {
+    position: relative;
+}
+
+.logo { 
+      position: absolute;
+      height: 31px;  
+      top: 50px;
+      right: 29px;
+      z-index: 100;
+}
+
+.logo2 {
+    height: 50px;
+    background:rgb(59, 59, 59, 0.8);
+    position: absolute;
+    top: 425px;
+    left: 2%;
+    z-index: 100;
+
+}
 
 .openingImage {  /*made this parrallex */
-    height: 700px;
-    position: relative;
+    height: 100vh;
+    position: relative; /*has to stay relative otherwise won't*/
     background: url(mainImage3.jpg) 70% no-repeat;
     background-attachment: fixed;
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.4;
-    z-index: 1
-
+    opacity: 1;
+    z-index: 5;
 }
+
+.h1 {
+    color: white;
+    z-index: 2000;
+}
+
+
 
 #firstDiv {
 	width: 100%;
     position: absolute;
     color: #fff;
-    z-index: 5;
+    z-index: 10;
   	padding-top: 25%;
-   
 }
 
 
@@ -55,11 +80,24 @@ html, body {
 
 }
 
+.title1 {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    animation: fadein 1.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+
+}
+
 .title2 {
     font-size: 45px;
     font-weight: bold;
     text-align: center;
-    animation: fadein 1.2s;
+    animation: fadein 2s;
 
 }
 
@@ -69,11 +107,26 @@ html, body {
 
 }
 
+.title3 {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    animation: fadein 2.5s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+
+}
+
+
 .tagLine {
  	top: 10%;
     font-size: 25px;
     text-align: center;
-    animation: fadein 2s;
+    animation: fadein 3s;
     padding-top: 40px;
 }
 
@@ -82,15 +135,54 @@ html, body {
     to   { opacity: 0; }
 }
 
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 30%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 10px; /* Add some space below the input */
+    display: block; 
+    position: absolute;
+    top: 6.5%;
+    left:1%;
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 11%;
+    left:1%;
+}
+
+
+
+#myUL li a {
+    width: 40 vw;
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: 1%; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 5px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 12px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+
 #secondDiv {
 	padding-top: 90px;
 	padding-bottom: 90px;
 	text-align: center;
 	font-size: 25px;
+    background: #3b3b3b;
+    color: white;
 }
 
-#iframe {
-	padding-top: 90px;
-	width: 100%;
-
-}
