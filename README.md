@@ -30,20 +30,18 @@ Technologies, Frameworks, and Programming Languages used
 Walkthrough of the Application
 
 V1.
-Visit the InstaFamous Birthplace website at: .........
+Visit the InstaFamous Birthplace website at: http://instafamous-birthplace.s3-website-us-east-1.amazonaws.com/
 
-Select your favorite celebrity from the list provided. View on the map where your favorite celebrity was born. View google maps places information about the location and get to know your favorite celebrity in a whole new way!
+Select your favorite celebrity from the list provided. View on the map where your favorite celebrity was born.
 
-V2. Update - Search for Celebrities
+Search two celebrities at once by clicking using the "multiple celebrities button" and see how far away they were born from each other!
 
-Type the name of your favorite celebrity into the search box. Be amazed as the location of their birth magically appears on the map. Click on the location and learn more about the place and about how it impacted the celebrity you love.
+Search all celebrities by clicking on the "Find all Celebrities" button.
 
 ************************************************************************
 
 Future Features to be Added
 
-1. Search two celebrities at once and see how far away they were born from each other!
+1. Search for Celebrities - Type the name of your favorite celebrity into the search box. Be amazed as the location of their birth magically appears on the map. Click on the location and learn more about the place and about how it impacted the celebrity you love.
 
-2. Create a list of celebrities who you want to remember their birthdays so that you can tweet them on the day, letting them know that you know where they are from and 
-
-3.
+2. Create a list of celebrities who you want to remember their birthdays so that you can tweet them on the day, letting them know that you know where they are from and care about them. :)
